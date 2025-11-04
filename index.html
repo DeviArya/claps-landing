@@ -1,131 +1,463 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CLAPS Academy — 3‑Month Banking & Finance Program</title>
-  <meta name="description" content="Any graduate below 26 can become a smart banker in 12 weeks. 100% placement assistance. Live evening classes. Pay After Placement — just 10% of your CTC." />  <!-- Open Graph / Social -->  <meta property="og:title" content="CLAPS Academy — Banking & Finance Training (12 Weeks)" />
+  <title>CLAPS Academy — Banking & Finance (3-Month Program)</title>
+  <meta name="description" content="Any graduate below 26 can become a smart banker in 12 weeks. 100% placement assistance. Live evening classes. Pay After Placement — just 10% of your CTC." />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="CLAPS Academy — 12-Week Banking & Finance Program" />
   <meta property="og:description" content="Any graduate below 26 · Evening live classes · 100% placement assistance · Pay After Placement (10% CTC)." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="claps-og.jpg" />
   <meta property="og:url" content="https://www.sucselix.com/claps" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://www.sucselix.com/claps" />  <!-- Fonts -->  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="canonical" href="https://www.sucselix.com/claps" />
+
+  <!-- Fonts (safe fallbacks if blocked) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
     :root{
-      --blue-900:#062a5a;--blue-700:#0a4ea3;--blue-500:#1780ff;--sky-400:#00C0D9;--ink:#001428;--bg:#f7fbff
+      --ink:#0b1020;
+      --muted:#5e6a85;
+      --border:#e6efff;
+      --white:#ffffff;
+      --blue-950:#041b3f;
+      --blue-900:#062a5a;
+      --blue-800:#0a3f86;
+      --blue-700:#0a4ea3;
+      --blue-500:#1780ff;
+      --sky-400:#00C0D9;
+      --glass: rgba(255,255,255,0.10);
+      --shadow-lg: 0 30px 60px rgba(4,27,63,.25);
+      --shadow-md: 0 16px 34px rgba(4,27,63,.18);
+      --radius: 18px;
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{font-family:Poppins, Montserrat, system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; margin:0; background:var(--bg); color:var(--ink)}
-    a{color:inherit;text-decoration:none}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:linear-gradient(180deg,#f7fbff 0%,#f8fbff 30%,#ffffff 100%);
+      font-family:Poppins, Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
     img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
 
-    /* Layout */
-    header{background:var(--blue-700);color:#fff;padding:18px 16px;text-align:center;position:sticky;top:0;z-index:10}
-    header h1{margin:0;font-size:24px;letter-spacing:.2px}
-    section{padding:48px 20px;max-width:1000px;margin:auto}
+    .container{width:min(1200px,92%);margin-inline:auto}
 
-    /* Hero */
-    .hero{background:linear-gradient(180deg,var(--blue-900),var(--blue-500));color:#fff;text-align:center;padding:90px 20px}
-    .hero h2{font-size:40px;margin:0 0 10px}
-    .hero p{font-size:18px;margin:0 0 6px}
-    .btn{display:inline-block;background:var(--sky-400);color:var(--ink);padding:14px 24px;border:none;border-radius:30px;font-weight:700;cursor:pointer;margin-top:18px;box-shadow:0 10px 24px rgba(0,192,217,.25)}
-    .btn:active{transform:translateY(1px)}
-
-    /* Content blocks */
-    h2{color:var(--blue-900);margin-top:0}
-    ul{line-height:1.65;padding-left:18px}
-
-    /* Footer */
-    footer{background:#061a3a;color:#d3e6ff;padding:28px 16px;text-align:center}
-
-    /* Mobile optimizations */
-    @media (max-width: 768px){
-      header h1{font-size:20px}
-      .hero{padding:72px 16px}
-      .hero h2{font-size:30px}
-      .hero p{font-size:16px}
-      section{padding:36px 16px}
-      .sticky-cta{display:flex}
+    /* Topbar */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(6,42,90,.58);
+      backdrop-filter:saturate(160%) blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff}
+    .brand img{height:40px;width:auto;object-fit:contain}
+    .brand .t{display:flex;flex-direction:column;line-height:1}
+    .brand .t b{font-family:Montserrat, Poppins, sans-serif;letter-spacing:.3px}
+    .brand .t small{opacity:.8;font-size:12px}
+    .nav .links{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{
+      border:1px solid rgba(255,255,255,.25);
+      color:#fff;padding:8px 12px;border-radius:999px;font-weight:600;
+      background:rgba(255,255,255,.08)
     }
 
-    /* Sticky CTA (mobile) */
-    .sticky-cta{position:fixed;left:0;right:0;bottom:0;background:#ffffffee;backdrop-filter:saturate(160%) blur(6px);border-top:1px solid #e6efff;padding:10px 14px;display:none;align-items:center;justify-content:space-between;gap:10px;z-index:20}
-    .sticky-cta .cta-btn{flex:1;text-align:center;background:var(--sky-400);padding:12px 10px;border-radius:999px;font-weight:700}
-  </style></head>
+    /* Buttons */
+    .btn{display:inline-block;padding:14px 20px;border-radius:999px;font-weight:700;letter-spacing:.2px;transition:.25s transform,.25s box-shadow}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--sky-400);color:#002032;box-shadow:0 14px 30px rgba(0,192,217,.30)}
+    .btn-ghost{border:2px solid var(--sky-400);color:#fff}
+    .btn-dark{background:#0f1d3a;color:#d9eeff}
+
+    /* HERO */
+    .hero{
+      position:relative; color:#fff;
+      background: radial-gradient(1200px 500px at 85% -10%, rgba(0,192,217,.25), transparent 60%),
+                  linear-gradient(135deg, var(--blue-950) 0%, var(--blue-800) 45%, var(--blue-500) 100%);
+      overflow:hidden;
+    }
+    .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;padding:84px 0 64px}
+    .hero h1{font-family:Montserrat, Poppins, sans-serif;font-size:46px;line-height:1.08;margin:10px 0 12px;font-weight:800}
+    .lead{margin:0 0 18px;font-size:18px;color:#e8f5ff}
+    .badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);font-weight:700}
+    .hero-visual .frame{
+      border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.22);box-shadow:var(--shadow-lg)
+    }
+    .hero-visual .stamp{
+      position:absolute;top:10px;right:10px;background:rgba(255,255,255,.92);
+      padding:8px 12px;border-radius:14px;color:#002032;font-weight:700
+    }
+
+    /* Logos strip */
+    .logos{background:#f7fbff;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .logos .row{display:grid;grid-template-columns:repeat(6,1fr);gap:28px;align-items:center;opacity:.95;padding:20px 0}
+    .logos img{filter:grayscale(100%);opacity:.8;transition:.25s}
+    .logos img:hover{filter:none;opacity:1}
+
+    /* Sections */
+    section{padding:68px 0}
+    .title{font-family:Montserrat, Poppins, sans-serif;font-size:34px;margin:0 0 10px;color:#061a3a}
+    .sub{color:var(--muted);margin:0 0 26px}
+
+    /* Cards / grids */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-md)}
+    .card h3{margin:4px 0 8px;font-size:18px}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+    .ico{width:34px;height:34px;border-radius:12px;background:#e9f3ff;border:1px solid #d6e9ff;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+
+    /* Timeline weeks */
+    .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .week{background:linear-gradient(160deg,#ffffff 0%,#f7fbff 100%);border:1px solid #e9f3ff;border-radius:16px;padding:18px}
+    .week h4{margin:0 0 8px;color:#0b3f8a}
+    .week ul{margin:0;padding-left:18px;line-height:1.6}
+
+    /* Outcomes */
+    .kpi{display:flex;gap:12px;align-items:flex-start;padding:18px;border-radius:16px;background:#fff;border:1px solid var(--border);box-shadow:0 12px 30px rgba(8,26,60,.08)}
+    .kpi strong{font-size:18px}
+
+    /* CTA band */
+    .cta-band{
+      color:#fff;background:linear-gradient(135deg,#0a3f86 0%,#1780ff 100%);
+      border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)
+    }
+    .cta-band .box{display:flex;gap:18px;align-items:center;justify-content:space-between;padding:22px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:20px}
+
+    /* Apply form (static) */
+    .form .fld{display:flex;flex-direction:column;gap:6px}
+    .form input,.form textarea, .form select{
+      width:100%;padding:14px;border-radius:12px;border:1px solid #cfe4ff;outline:none;font:inherit
+    }
+
+    /* Footer */
+    footer{background:#061a3a;color:#d3e6ff}
+    footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}
+    footer a{color:#d3e6ff}
+
+    /* Floating WhatsApp */
+    .float-wa{position:fixed;right:18px;bottom:18px;z-index:70;background:#25D366;color:#001428;padding:12px 16px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);display:flex;align-items:center;gap:8px;font-weight:800}
+    .float-wa svg{display:block}
+
+    /* Reveal & hover polish */
+    .card,.week,.kpi{transition:transform .25s ease, box-shadow .25s ease}
+    .card:hover,.week:hover,.kpi:hover{transform:translateY(-4px);box-shadow:0 24px 44px rgba(8,26,60,.14)}
+    .reveal{opacity:0;transform:translateY(14px)}
+    .reveal.in{opacity:1;transform:none;transition:opacity .7s ease, transform .7s ease}
+
+    /* Responsive */
+    @media (max-width: 1024px){
+      .hero .wrap{grid-template-columns:1fr;padding:68px 0}
+      .logos .row{grid-template-columns:repeat(4,1fr)}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+      .timeline{grid-template-columns:repeat(2,1fr)}
+      footer .cols{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .hero h1{font-size:34px}
+      .logos .row{grid-template-columns:repeat(3,1fr)}
+      .grid-3,.grid-2,.timeline{grid-template-columns:1fr}
+      footer .cols{grid-template-columns:1fr}
+      .brand .t small{display:none}
+    }
+  </style>
+</head>
 <body>
+
+  <!-- NAV -->
   <header>
-    <div style="max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:center;gap:12px">
-      <img src="claps-logo-new.png" alt="CLAPS Academy logo" style="height:42px;width:auto;object-fit:contain;display:inline-block"/>
-      <h1 style="margin:0">CLAPS Academy — Powered by Sucselix Pvt Ltd</h1>
+    <div class="container nav">
+      <div class="brand">
+        <img src="claps-logo-new.png" alt="CLAPS Academy logo">
+        <div class="t">
+          <b>CLAPS Academy</b>
+          <small>Powered by Sucselix Pvt Ltd</small>
+        </div>
+      </div>
+      <div class="links">
+        <a class="chip" href="#program">Program</a>
+        <a class="chip" href="#syllabus">Syllabus</a>
+        <a class="chip" href="#apply">Apply</a>
+      </div>
     </div>
-  </header>  <section class="hero" id="top">
-    <h2>3‑Month Banking &amp; Finance Training Program</h2>
-    <p>Any graduate below age 26 can join our job‑focused online training.</p>
-    <p>Evening Live Classes (7:30–9:30 PM) · 100% Placement Assistance · Pay After Placement (10% of CTC)</p>
-    <a href="#apply" class="btn" aria-label="Apply Now">Apply Now</a>
-  </section>  <section id="apply" aria-label="Eligibility and Application">
-    <h2>Who Can Apply?</h2>
-    <p>✅ Any graduate (BCom, BSc, BBA, MBA, etc.) from Kerala.<br>✅ Age below 26 years.<br>✅ Eager to build a rewarding career in Banking &amp; Finance.</p>
-    <a href="https://wa.me/91812906790?text=Hi%20CLAPS%20Academy%2C%20I%20want%20to%20apply%20for%20the%20Banking%20%26%20Finance%20program" target="_blank" rel="noopener" class="btn" aria-label="Chat on WhatsApp">Chat on WhatsApp</a>
-  </section>  <section id="highlights" aria-label="Program Highlights">
-    <h2>Why Choose CLAPS?</h2>
-    <ul>
-      <li>✅ 100% Placement Assistance with major banks &amp; financial institutions (HDFC, ICICI, Axis, SBI, Bajaj Allianz, and more)</li>
-      <li>✅ Pay After Placement — only 10% of your CTC after securing a job</li>
-      <li>✅ Online Live Classes — Evening 7:30 to 9:30 PM</li>
-      <li>✅ Learn directly from industry professionals</li>
-      <li>✅ Kerala‑wide recruiter network</li>
-    </ul>
-  </section>  <section id="syllabus" aria-label="12-Week Syllabus">
-    <h2>12‑Week Syllabus Overview</h2>
-    <ul>
-      <li><strong>Weeks 1–2: Banking Core</strong> — Indian Banking structure, deposits, loans, risk, and compliance basics (KYC/AML)</li>
-      <li><strong>Weeks 3–4: Retail Financial Products</strong> — Insurance, mutual funds, credit cards, gold loans, and cross‑selling strategies</li>
-      <li><strong>Weeks 5–6: Customer Excellence</strong> — Sales communication, objection handling, CRM, and ethical selling</li>
-      <li><strong>Weeks 7–8: Career Assets</strong> — Resume writing, LinkedIn optimization, and aptitude for BFSI roles</li>
-      <li><strong>Weeks 9–10: Interview Mastery</strong> — Mock HR &amp; panel interviews, GD sessions, and caselets</li>
-      <li><strong>Weeks 11–12: Placement Drive</strong> — Recruiter connects, referrals, and offer support</li>
-    </ul>
-  </section>  <section id="outcomes" aria-label="Outcomes">
-    <h2>Outcomes You Can Expect</h2>
-    <ul>
-      <li>🏆 Become job‑ready in 12 weeks with hands‑on skills</li>
-      <li>💼 Receive recruiter calls through CLAPS placement partners</li>
-      <li>🧠 Build strong communication and interview confidence</li>
-      <li>🎯 Secure roles in banking and finance sectors</li>
-    </ul>
-  </section>  <footer>
-    <p>📍 KMK Complex, Kollam – Thirumangalam Rd, Highway, Randamkutty, Kollam 691004</p>
-    <p>📞 +91 812906790 | +91 952614474</p>
-    <p>© <span id="year"></span> CLAPS Academy · All rights reserved</p>
-  </footer>  <!-- Mobile sticky CTA -->  <div class="sticky-cta" role="region" aria-label="Quick Apply">
-    <a href="#apply" class="cta-btn" aria-label="Apply Now (scroll to apply)">Apply Now</a>
-    <a href="https://wa.me/91812906790?text=Hi%20CLAPS%20Academy%2C%20I%20want%20to%20apply%20for%20the%20Banking%20%26%20Finance%20program" target="_blank" rel="noopener" class="cta-btn" aria-label="Chat on WhatsApp (opens in WhatsApp)">WhatsApp</a>
-  </div>  <script>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container wrap">
+      <div>
+        <span class="badge">Be a Smart Banker · Build Your Career with CLAPS</span>
+        <h1>3-Month Banking &amp; Finance Training Program</h1>
+        <p class="lead">Any graduate below age 26 · Live Evening Classes (7:30–9:30 PM) · 100% Placement Assistance · <b>Pay After Placement — 10% of CTC</b></p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
+          <a href="#apply" class="btn btn-primary">Apply Now</a>
+          <a target="_blank" rel="noopener" class="btn btn-ghost" href="https://wa.me/91812906790?text=Hi%20CLAPS%20Academy%2C%20I%20want%20to%20apply%20for%20the%203-month%20Banking%20%26%20Finance%20program">WhatsApp Us</a>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px">
+          <div class="card" style="background:var(--glass);border-color:rgba(255,255,255,.22);color:#eaf6ff"><b>12 Weeks</b><div>Structured learning</div></div>
+          <div class="card" style="background:var(--glass);border-color:rgba(255,255,255,.22);color:#eaf6ff"><b>Live</b><div>Instructor-led</div></div>
+          <div class="card" style="background:var(--glass);border-color:rgba(255,255,255,.22);color:#eaf6ff"><b>1:1</b><div>Mock interviews</div></div>
+          <div class="card" style="background:var(--glass);border-color:rgba(255,255,255,.22);color:#eaf6ff"><b>Kerala</b><div>All districts</div></div>
+        </div>
+      </div>
+      <div class="hero-visual" style="position:relative">
+        <div class="stamp">Admissions Open</div>
+        <div class="frame">
+          <!-- Replace with your stock image -->
+          <img src="hero.jpg" alt="Young professionals in banking & finance">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS -->
+  <section class="logos" aria-label="Top recruiters">
+    <div class="container">
+      <div class="row">
+        <!-- replace with your PNG/SVG logos -->
+        <img src="logo-hdfc.png" alt="HDFC Bank"/>
+        <img src="logo-icici.png" alt="ICICI Bank"/>
+        <img src="logo-axis.png" alt="Axis Bank"/>
+        <img src="logo-sbi.png" alt="SBI"/>
+        <img src="logo-bajaj.png" alt="Bajaj Allianz"/>
+        <img src="logo-more.png" alt="Other partners"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CLAPS -->
+  <section id="program">
+    <div class="container">
+      <h2 class="title">Why Choose CLAPS?</h2>
+      <p class="sub">A placement-focused pathway designed with industry inputs and Kerala-wide hiring partners.</p>
+      <div class="grid-3">
+        <div class="card reveal">
+          <div class="ico">
+            <!-- briefcase -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1" stroke="#0b3f8a" stroke-width="2"/><rect x="3" y="6" width="18" height="14" rx="2" stroke="#0b3f8a" stroke-width="2"/><path d="M3 12h18" stroke="#0b3f8a" stroke-width="2"/></svg>
+          </div>
+          <h3>Placement Assistance</h3>
+          <p>Dedicated team, recruiter connects, and interview scheduling with major banks & financial institutions.</p>
+          <div class="meta"><span>100% assistance</span><span>Pan-Kerala</span></div>
+        </div>
+        <div class="card reveal">
+          <div class="ico">
+            <!-- handshake -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 12l4-4 5 5 5-5 4 4" stroke="#0b3f8a" stroke-width="2" /></svg>
+          </div>
+          <h3>Pay After Placement</h3>
+          <p>Focus on learning; pay <b>only 10% of your CTC</b> after you land the job.</p>
+          <div class="meta"><span>Outcome-aligned</span><span>Zero stress</span></div>
+        </div>
+        <div class="card reveal">
+          <div class="ico">
+            <!-- video -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="13" height="14" rx="2" stroke="#0b3f8a" stroke-width="2"/><path d="M16 9l5-3v12l-5-3V9z" stroke="#0b3f8a" stroke-width="2"/></svg>
+          </div>
+          <h3>Live Evening Classes</h3>
+          <p>Learn from working professionals, <b>7:30–9:30 PM</b> — perfect for graduates & jobseekers.</p>
+          <div class="meta"><span>Online</span><span>Instructor-led</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYLLABUS -->
+  <section id="syllabus" style="background:#f7fbff">
+    <div class="container">
+      <h2 class="title">What You’ll Learn in 12 Weeks</h2>
+      <p class="sub">1.5 months Certification on Banking &amp; Finance + 1.5 months Interview &amp; Placement Prep.</p>
+      <div class="timeline">
+        <div class="week reveal">
+          <h4>Weeks 1–2 · Banking Core</h4>
+          <ul>
+            <li>Indian Banking landscape & roles</li>
+            <li>Accounts, deposits, loans, interest, risk basics</li>
+            <li>KYC/AML & compliance fundamentals</li>
+          </ul>
+        </div>
+        <div class="week reveal">
+          <h4>Weeks 3–4 · Retail Products</h4>
+          <ul>
+            <li>Credit cards, personal & gold loans</li>
+            <li>Insurance & mutual funds</li>
+            <li>Branch ops & sales etiquette</li>
+          </ul>
+        </div>
+        <div class="week reveal">
+          <h4>Weeks 5–6 · Customer Excellence</h4>
+          <ul>
+            <li>Communication & soft skills for BFSI</li>
+            <li>CRM, objection handling, up-/cross-sell</li>
+            <li>Targets, reporting, ethical selling</li>
+          </ul>
+        </div>
+        <div class="week reveal">
+          <h4>Weeks 7–8 · Career Assets</h4>
+          <ul>
+            <li>ATS-friendly resume & LinkedIn makeover</li>
+            <li>Pitch your story + achievements</li>
+            <li>Aptitude basics for BFSI roles</li>
+          </ul>
+        </div>
+        <div class="week reveal">
+          <h4>Weeks 9–10 · Interview Mastery</h4>
+          <ul>
+            <li>HR questions, role-plays & panel etiquette</li>
+            <li>Caselets & scenario-based tasks</li>
+            <li>Group discussions & presentations</li>
+          </ul>
+        </div>
+        <div class="week reveal">
+          <h4>Weeks 11–12 · Placement Drive</h4>
+          <ul>
+            <li>Company shortlisting & referrals</li>
+            <li>Final mocks & recruiter connects</li>
+            <li>Offer review & onboarding support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section>
+    <div class="container">
+      <h2 class="title">Outcomes You Can Expect</h2>
+      <div class="grid-3">
+        <div class="kpi reveal">
+          <div class="ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 12l6 6L21 6" stroke="#0b3f8a" stroke-width="2"/></svg>
+          </div>
+          <div><strong>Job-ready in 12 weeks</strong><div class="meta">Industry-aligned skills & scenario practice</div></div>
+        </div>
+        <div class="kpi reveal">
+          <div class="ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0b3f8a" stroke-width="2"/><path d="M7 12h10M12 7v10" stroke="#0b3f8a" stroke-width="2"/></svg>
+          </div>
+          <div><strong>Interview-ready profile</strong><div class="meta">ATS resume + LinkedIn + mock rounds</div></div>
+        </div>
+        <div class="kpi reveal">
+          <div class="ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h10M4 17h7" stroke="#0b3f8a" stroke-width="2"/></svg>
+          </div>
+          <div><strong>Recruiter calls</strong><div class="meta">CLAPS placement team & partner network</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" id="apply">
+    <div class="container">
+      <div class="box">
+        <div>
+          <h2 class="title" style="color:#fff;margin:0 0 6px">Ready to become a Smart Banker?</h2>
+          <p class="sub" style="color:#e6f7ff;margin:0">Seats are limited. Apply now — our team will connect you within 24 hours.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="#form" class="btn btn-dark">Start Application</a>
+          <a target="_blank" rel="noopener" class="btn btn-primary" href="https://wa.me/91812906790?text=Hi%20CLAPS%20Academy%2C%20I%20want%20to%20apply%20for%20the%203-month%20Banking%20%26%20Finance%20program">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY FORM (static front-end) -->
+  <section id="form" class="form" style="background:#f7fbff">
+    <div class="container">
+      <h2 class="title">Apply in 2 Minutes</h2>
+      <p class="sub">Fill your details — we’ll call you with the next steps.</p>
+      <form class="card" onsubmit="event.preventDefault(); alert('Thanks! We will contact you shortly.');">
+        <div class="grid-2">
+          <div class="fld">
+            <label for="name"><b>Full Name</b></label>
+            <input id="name" required placeholder="Your name">
+          </div>
+          <div class="fld">
+            <label for="phone"><b>Phone</b></label>
+            <input id="phone" required placeholder="81290 6790">
+          </div>
+          <div class="fld">
+            <label for="district"><b>District (Kerala)</b></label>
+            <input id="district" placeholder="e.g., Kollam">
+          </div>
+          <div class="fld">
+            <label for="degree"><b>Qualification</b></label>
+            <select id="degree">
+              <option>Choose...</option>
+              <option>BCom</option><option>BSc</option><option>BBA</option><option>MBA</option><option>Other</option>
+            </select>
+          </div>
+          <div class="fld" style="grid-column:1/-1">
+            <label for="msg"><b>Anything we should know?</b></label>
+            <textarea id="msg" rows="4" placeholder="Tell us about your goals"></textarea>
+          </div>
+        </div>
+        <div style="margin-top:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <button class="btn btn-primary" type="submit">Submit Application</button>
+          <span class="meta">By submitting, you agree to our terms.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" style="padding:34px 0">
+      <div class="cols">
+        <div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+            <img src="claps-logo-new.png" alt="CLAPS logo" style="height:34px">
+            <strong>CLAPS Academy</strong>
+          </div>
+          <p style="margin:0 0 6px">Powered by <b>Sucselix Pvt Ltd</b></p>
+          <p style="margin:0 0 6px">KMK Complex, Kollam – Thirumangalam Rd, Highway, Randamkutty, Kollam 691004</p>
+        </div>
+        <div>
+          <h4 style="margin:0 0 8px">Contact</h4>
+          <p style="margin:0 0 6px">📞 +91 812906790</p>
+          <p style="margin:0 0 6px">📞 +91 952614474</p>
+          <p style="margin:8px 0 0;font-size:13px;opacity:.9">Prefer WhatsApp for quick help.</p>
+        </div>
+        <div>
+          <h4 style="margin:0 0 8px">Quick Links</h4>
+          <p style="margin:0 0 6px"><a href="#program">Program</a></p>
+          <p style="margin:0 0 6px"><a href="#syllabus">Syllabus</a></p>
+          <p style="margin:0 0 6px"><a href="#apply">Apply</a></p>
+        </div>
+      </div>
+      <div style="margin-top:18px;border-top:1px solid rgba(255,255,255,.15);padding-top:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <small>© <span id="year"></span> CLAPS Academy · All rights reserved</small>
+        <small>Made with ❤️ in Kerala</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a class="float-wa" href="https://wa.me/91812906790?text=Hi%20CLAPS%20Academy%2C%20I%20want%20to%20apply%20for%20the%203-month%20Banking%20%26%20Finance%20program" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="18" height="18" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M19.5 17.6c-.2-.1-1.3-.7-1.5-.8s-.4-.1-.6.1-.7.8-.8.9-.3.2-.5.1c-.2-.1-.9-.3-1.8-1.1-.7-.6-1.1-1.3-1.2-1.5-.1-.2 0-.3.1-.4.1-.1.2-.3.3-.4.1-.1.1-.2.2-.3.1-.1.1-.2.2-.3.1-.1.1-.2 0-.3 0-.1-.6-1.5-.8-2s-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 3.9 3.5 1.5.6 2.1.7 2.9.6.5-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1 0-.3-.2-.4-.4-.5Z" fill="#001428"/><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.8L4 29l8.4-1.5c1.6.9 3.5 1.5 5.6 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3Z" stroke="#001428"/></svg>
+    WhatsApp
+  </a>
+
+  <script>
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Show sticky CTA only on small screens after some scroll
-    const sticky = document.querySelector('.sticky-cta');
-    const mq = window.matchMedia('(max-width: 768px)');
-    const onScroll = () => {
-      if(!mq.matches) return; // only mobile
-      sticky.style.display = (window.scrollY > 220) ? 'flex' : 'none';
-    };
-    window.addEventListener('scroll', onScroll, {passive:true});
-    onScroll();
-  </script>  <!-- Optional: Structured data for better preview (safe placeholders) -->  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "Banking & Finance Training (3 Months)",
-    "provider": {
-      "@type": "Organization",
-      "name": "CLAPS Academy",
-      "url": "https://www.sucselix.com/claps"
-    },
-    "description": "Any graduate below 26 · Evening live classes · Placement assistance · Pay After Placement (10% CTC)."
-  }
-  </script></body>
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+    }, {threshold: .12});
+    document.querySelectorAll('.reveal, .card, .week, .kpi').forEach(el=>io.observe(el));
+  </script>
+</body>
 </html>
